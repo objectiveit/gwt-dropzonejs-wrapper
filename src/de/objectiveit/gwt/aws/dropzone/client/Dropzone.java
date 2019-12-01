@@ -175,9 +175,6 @@ public class Dropzone extends Composite {
 		if (!(dropzone instanceof $wnd.Dropzone)) {
 			return;
 		}
-		//I'm loaded, add the eventHandlers
-
-		//TODO: refactor this to another method
 
 		if (this.@de.objectiveit.gwt.aws.dropzone.client.Dropzone::handler) {
 

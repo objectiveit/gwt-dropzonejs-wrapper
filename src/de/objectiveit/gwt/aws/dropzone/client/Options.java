@@ -18,7 +18,7 @@ import de.objectiveit.gwt.aws.dropzone.client.interfaces.Method;
  * Wrapper for the Dropzone options
  *
  */
-class Options extends JavaScriptObject implements DropzoneOptions {
+public class Options extends JavaScriptObject implements DropzoneOptions {
 
 	protected final static native DropzoneOptions create()/*-{
 		return {
@@ -72,27 +72,27 @@ class Options extends JavaScriptObject implements DropzoneOptions {
 		}
 	}-*/;
 
-//	@Override
-//	public final native void setAcceptFile(FileAcceptEvent fileAcceptEvent) /*-{
-//		this.accept = function(file, done) {
-//
-//			//			if (!errorMessage || errorMessage.trim().length === 0) {
-//			//				done();
-//			//			} else {
-//			//				done(errorMessage);
-//			//			}
-//
-//			var theInstance = this;
-//			
-//			var handler = @de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::new()();
-//			handler.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::setDone(*)(done);
-//			
-//			var done = handler.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::getDone()();
-//			
+	@Override
+	public final native void setAcceptFile(FileAcceptEvent fileAcceptEvent) /*-{
+		this.accept = function(file, done) {
+
+			//			if (!errorMessage || errorMessage.trim().length === 0) {
+			//				done();
+			//			} else {
+			//				done(errorMessage);
+			//			}
+
+			var theInstance = this;
+			
+			var handler = @de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::new()();
+			handler.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::setDone(*)(done);
+			
+			var done = handler.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::getDone()();
+			
 //			file.uploadUrl='zz';
 //			file.name='zz';
 //			done();
-			
+//			
 //			handler.onSuccess = function(
 //					url) {
 //						debugger;
@@ -107,10 +107,10 @@ class Options extends JavaScriptObject implements DropzoneOptions {
 //				done(error);
 //			};
 
-//			fileAcceptEvent.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEvent::accept(Lde/objectiveit/gwt/aws/dropzone/client/interfaces/File;Lde/objectiveit/gwt/aws/dropzone/client/event/FileAcceptEventCallbackHandler;)(file,handler);
-//
-//		}
-//	}-*/;
+			fileAcceptEvent.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEvent::accept(Lde/objectiveit/gwt/aws/dropzone/client/interfaces/File;Lde/objectiveit/gwt/aws/dropzone/client/event/FileAcceptEventCallbackHandler;)(file,handler);
+
+		}
+	}-*/;
 
 	@Override
 	public final native void setForceFallback(boolean forceFallback)/*-{
@@ -150,7 +150,6 @@ class Options extends JavaScriptObject implements DropzoneOptions {
 
 	@Override
 	public final void setMethod(Method method) {
-
 		if (method != null) {
 			setMethodJS(method.toString());
 		} else {

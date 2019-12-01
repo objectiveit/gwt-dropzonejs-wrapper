@@ -2,19 +2,21 @@ package de.objectiveit.gwt.aws.dropzone.client.event;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class FileAcceptEventCallbackHandler implements FileAcceptEventCallback{
-	
+public class FileAcceptEventCallbackHandler implements FileAcceptEventCallback {
+
 	private JavaScriptObject done;
 
 	@Override
-	public void onSuccess(String url) {
-		
-	}
+	public native void onSuccess() /*-{
+		var done = this.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::getDone()();
+		done();
+	}-*/;
 
 	@Override
-	public void onError(String errorMessage) {
-		
-	}
+	public native void onError(String errorMessage) /*-{ 
+	var done = this.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::getDone()();
+		done(errorMessage);
+	}-*/;
 
 	public JavaScriptObject getDone() {
 		return done;

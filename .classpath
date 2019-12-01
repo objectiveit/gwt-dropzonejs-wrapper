@@ -4,5 +4,19 @@
 	<classpathentry kind="src" output="test-classes" path="test"/>
 	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER/GWT 2.8.1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/aws-java-sdk-core-1.11.683.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/aws-java-sdk-kms-1.11.683.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/aws-java-sdk-s3-1.11.683.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jmespath-java-1.11.683.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-core-2.8.11.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-databind-2.8.11.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-annotations-2.8.11.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpclient-4.4.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/ion-java-1.5.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jackson-dataformat-cbor-2.8.11.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/joda-time-2.9.9.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

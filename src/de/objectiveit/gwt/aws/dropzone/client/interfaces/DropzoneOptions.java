@@ -77,7 +77,7 @@ public interface DropzoneOptions {
    */
   void setFallback(DropzoneFallbackEvent fallbackHandler);
 
-//  void setAcceptFile(FileAcceptEvent fileAcceptEvent);
+  void setAcceptFile(FileAcceptEvent fileAcceptEvent);
 
   /**
    * If true the fallback will be forced. This is very useful to test your
