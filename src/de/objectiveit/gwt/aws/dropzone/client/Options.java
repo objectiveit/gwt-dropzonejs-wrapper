@@ -76,12 +76,6 @@ public class Options extends JavaScriptObject implements DropzoneOptions {
 	public final native void setAcceptFile(FileAcceptEvent fileAcceptEvent) /*-{
 		this.accept = function(file, done) {
 
-			//			if (!errorMessage || errorMessage.trim().length === 0) {
-			//				done();
-			//			} else {
-			//				done(errorMessage);
-			//			}
-
 			var theInstance = this;
 			
 			var handler = @de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::new()();
@@ -89,24 +83,6 @@ public class Options extends JavaScriptObject implements DropzoneOptions {
 			
 			var done = handler.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEventCallbackHandler::getDone()();
 			
-//			file.uploadUrl='zz';
-//			file.name='zz';
-//			done();
-//			
-//			handler.onSuccess = function(
-//					url) {
-//						debugger;
-//				console.log(url);
-//				done();
-//			};
-//
-//			handler.onError = function(
-//					error) {
-//						debugger;
-//				console.err(error);
-//				done(error);
-//			};
-
 			fileAcceptEvent.@de.objectiveit.gwt.aws.dropzone.client.event.FileAcceptEvent::accept(Lde/objectiveit/gwt/aws/dropzone/client/interfaces/File;Lde/objectiveit/gwt/aws/dropzone/client/event/FileAcceptEventCallbackHandler;)(file,handler);
 
 		}
